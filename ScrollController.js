@@ -7,7 +7,7 @@
  *
  *
  */
-(function ( Controller, undefined ) {
+(function ( window, Controller, undefined ) {
 
 
 "use strict";
