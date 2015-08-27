@@ -8,13 +8,14 @@ ScrollController
 ## Installation
 
 ```shell
-npm install properjs-scrollcontroller
+npm install properjs-scrollcontroller --save-dev
 ```
 
 
 ## Usage
 ```javascript
-var scroller = new ScrollController();
+var ScrollController = require( "properjs-scrollcontroller" ),
+    scroller = new ScrollController();
 
 // Bind event
 scroller.on( "scroll", function () {

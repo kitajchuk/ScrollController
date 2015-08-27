@@ -2,7 +2,7 @@
     "title": "ScrollController",
     "name": "properjs-scrollcontroller",
     "description": "Window scroll event controller using request animation frame.",
-    "version": "0.1.1",
+    "version": "0.2.0",
     "homepage": "https://github.com/ProperJS/ScrollController",
     "readmeFilename": "README.md",
     "contributors": [
@@ -27,20 +27,16 @@
     ],
     "main": "ScrollController",
     "scripts": {
-        "prepublish": "properjs"
-    },
-    "properjs": {
-        "dependencies": ["properjs-raf", "properjs-controller"],
-        "output": "dist/ScrollController.js"
+        "test": "webpack test/test.js test/dist/common.js ; cp ScrollController.js test/dist/browser.js"
     },
     "dependencies": {
-        "properjs-raf": "~0.1",
-        "properjs-controller": "~0.1"
+        "properjs-controller": "~0.2"
     },
     "keywords": [
-        "raf",
+        "properjs",
         "event",
-        "requestanimationframe",
-        "scroll"
+        "requestAnimationFrame",
+        "scroll",
+        "window"
     ]
 }
