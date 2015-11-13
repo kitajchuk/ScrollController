@@ -2,7 +2,7 @@
     "title": "ScrollController",
     "name": "properjs-scrollcontroller",
     "description": "Window scroll event controller using request animation frame.",
-    "version": "0.2.0",
+    "version": "0.2.1",
     "homepage": "https://github.com/ProperJS/ScrollController",
     "readmeFilename": "README.md",
     "contributors": [

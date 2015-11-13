@@ -132,7 +132,12 @@
      *
      */
     ScrollController.prototype.getScrollMax = function () {
-        return (document.documentElement.offsetHeight - window.innerHeight);
+        return Math.max(
+            document.body.scrollHeight, document.documentElement.scrollHeight,
+            document.body.offsetHeight, document.documentElement.offsetHeight,
+            document.documentElement.clientHeight
+
+        ) - window.innerHeight;
     };
     
     /**
@@ -144,7 +149,7 @@
      *
      */
     ScrollController.prototype.isScrollMax = function () {
-        return (this.getScrollY() >= (document.documentElement.offsetHeight - window.innerHeight));
+        return (this.getScrollY() >= this.getScrollMax());
     };
     
     /**
