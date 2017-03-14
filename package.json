@@ -1,42 +1,48 @@
 {
-    "title": "ScrollController",
-    "name": "properjs-scrollcontroller",
-    "description": "Window scroll event controller using request animation frame.",
-    "version": "0.2.1",
-    "homepage": "https://github.com/ProperJS/ScrollController",
-    "readmeFilename": "README.md",
-    "contributors": [
-        {
-            "name": "Brandon Kitajchuk",
-            "email": "kitajchuk@gmail.com",
-            "url": "http://blkpdx.com"
-        }
-    ],
-    "repository": {
-        "type": "git",
-        "url": "git://github.com/ProperJS/ScrollController.git"
-    },
-    "bugs": {
-        "url": "https://github.com/ProperJS/ScrollController/issues"
-    },
-    "licenses": [
-        {
-            "type": "MIT",
-            "url": "https://github.com/ProperJS/ScrollController/blob/master/LICENSE"
-        }
-    ],
-    "main": "ScrollController",
-    "scripts": {
-        "test": "webpack test/test.js test/dist/common.js ; cp ScrollController.js test/dist/browser.js"
-    },
-    "dependencies": {
-        "properjs-controller": "~0.2"
-    },
-    "keywords": [
-        "properjs",
-        "event",
-        "requestAnimationFrame",
-        "scroll",
-        "window"
-    ]
+  "title": "ScrollController",
+  "name": "properjs-scrollcontroller",
+  "description": "Window scroll event controller using request animation frame.",
+  "version": "0.2.2",
+  "homepage": "https://github.com/ProperJS/ScrollController",
+  "readmeFilename": "README.md",
+  "contributors": [
+    {
+      "name": "Brandon Kitajchuk",
+      "email": "kitajchuk@gmail.com",
+      "url": "http://kitajchuk.com"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ProperJS/ScrollController.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ProperJS/ScrollController/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/ProperJS/ScrollController/blob/master/LICENSE"
+    }
+  ],
+  "main": "ScrollController",
+  "scripts": {
+    "build": "./node_modules/.bin/webpack -d --colors",
+    "watch": "./node_modules/.bin/webpack -d --watch --colors"
+  },
+  "dependencies": {
+    "properjs-controller": "~0.2"
+  },
+  "keywords": [
+    "properjs",
+    "event",
+    "requestAnimationFrame",
+    "scroll",
+    "window"
+  ],
+  "devDependencies": {
+    "browser-sync": "^2.18.8",
+    "browser-sync-webpack-plugin": "^1.1.4",
+    "webpack": "^2.2.1"
+  }
 }

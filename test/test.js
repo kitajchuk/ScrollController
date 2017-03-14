@@ -1,5 +1,13 @@
-var ScrollController = require( "../ScrollController" );
-var controller = new ScrollController();
+var ScrollController = require( "ScrollController" );
 
+// Test with Window
+var test1 = new ScrollController();
+    test1.on( "scroll", function () {
+        console.log( "test 1" );
+    });
 
-console.log( controller );
+// Test with element
+var test2 = new ScrollController( document.getElementById( "test" ) );
+    test2.on( "scroll", function () {
+        console.log( "test 2" );
+    });
