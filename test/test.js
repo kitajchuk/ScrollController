@@ -1,13 +1,36 @@
-var ScrollController = require( "ScrollController" );
+import ScrollController from "../ScrollController";
 
-// Test with Window
-var test1 = new ScrollController();
-    test1.on( "scroll", function () {
-        console.log( "test 1" );
-    });
+// Window scroll handling (RAF)
+const winScroll = new ScrollController();
 
-// Test with element
-var test2 = new ScrollController( document.getElementById( "test" ) );
-    test2.on( "scroll", function () {
-        console.log( "test 2" );
-    });
+winScroll.on( "idle", ( scrollY ) => {
+    console.log( "window idle", scrollY );
+});
+
+winScroll.on( "scroll", ( scrollY ) => {
+    console.log( "window scroll", scrollY );
+});
+
+winScroll.on( "scrolldown", ( scrollY ) => {
+    console.log( "window scrolldown", scrollY );
+});
+
+winScroll.on( "scrollup", ( scrollY ) => {
+    console.log( "window scrollup", scrollY );
+});
+
+winScroll.on( "scrollmin", ( scrollY ) => {
+    console.log( "window scrollmin", scrollY );
+});
+
+winScroll.on( "scrollmax", ( scrollY ) => {
+    console.log( "window scrollmax", scrollY );
+});
+
+// Inline element scroll handling (RAF)
+const divScroll = new ScrollController( document.getElementById( "test" ) );
+
+// All the same evens apply for inline elements as document (window) scroll
+divScroll.on( "scroll", ( scrollY ) => {
+    console.log( "div scroll", scrollY );
+});
