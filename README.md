@@ -5,7 +5,7 @@ ProperJS // ScrollController
 
 
 
-## Installation
+### Installation
 
 ```shell
 npm i properjs-scrollcontroller --save-dev
@@ -13,7 +13,7 @@ npm i properjs-scrollcontroller --save-dev
 
 
 
-## Usage
+### Usage
 ScrollController doesn't use any native window or document event binding for scroll handling. Rather, it uses requestAnimationFrame and supplies extra nifty scroll events for more control.
 ```javascript
 import ScrollController from "properjs-scrollcontroller";
